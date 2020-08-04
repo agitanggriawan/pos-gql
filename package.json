@@ -1,0 +1,16 @@
+{
+  "name": "base-express-gql",
+  "version": "1.0.0",
+  "description": "Base Apollo GraphQL with Express",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "agitanggriawan",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.16.1",
+    "lodash": "^4.17.19"
+  }
+}
