@@ -9,6 +9,11 @@ const books = [
     title: 'Jurassic Park',
     author: 'Michael Crichton',
   },
+  {
+    id: 3,
+    title: 'Where The Crawdads Sing',
+    author: 'Delia Owens',
+  },
 ];
 
 const resolvers = {
