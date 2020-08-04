@@ -18,6 +18,11 @@ const resolvers = {
 
       return books;
     },
+    async book(_, args, context) {
+      console.log('==> accessing book');
+
+      return books.find((x) => x.id == args.id);
+    },
   },
   Mutation: {
     async createBook(_, args) {
