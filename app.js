@@ -1,5 +1,12 @@
 const express = require('express');
 const { ApolloServer, makeExecutableSchema } = require('apollo-server-express');
+// CONFIG DATABASE
+const Knex = require('knex');
+const knexConfig = require('./knexfile');
+const { Model } = require('objection');
+const environment = process.env.NODE_ENV || 'local';
+Model.knex(Knex(knexConfig[environment]));
+
 const { typeDefs, resolvers } = require('./graphql');
 
 const app = express();

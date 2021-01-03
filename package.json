@@ -4,13 +4,18 @@
   "description": "Base Apollo GraphQL with Express",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
+    "local": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "agitanggriawan",
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^2.16.1",
-    "lodash": "^4.17.19"
+    "faker": "^5.1.0",
+    "knex": "^0.21.15",
+    "lodash": "^4.17.19",
+    "objection": "^2.2.4",
+    "pg": "^8.5.1"
   }
 }
