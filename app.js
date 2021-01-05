@@ -25,13 +25,6 @@ const server = new ApolloServer({
   context: ({ req }) => {
     return req.headers;
   },
-  formatError: (err) => {
-    console.log('==> ERROR', err);
-    if (err.message.startsWith('Database Error: ')) {
-      return new Error('Internal server error');
-    }
-    return err;
-  },
 });
 
 server.applyMiddleware({
