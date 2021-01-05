@@ -14,6 +14,10 @@ exports.seed = function (knex) {
       cid: faker.random.uuid(),
       name: 'Obat',
     },
+    {
+      cid: faker.random.uuid(),
+      name: 'Pampers',
+    },
   ];
 
   return knex('categories')

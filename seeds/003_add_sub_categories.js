@@ -32,6 +32,21 @@ exports.seed = function (knex) {
       category_id: 1,
       name: 'Rentengan',
     },
+    {
+      scid: faker.random.uuid(),
+      category_id: 2,
+      name: 'Snack',
+    },
+    {
+      scid: faker.random.uuid(),
+      category_id: 3,
+      name: 'Obat',
+    },
+    {
+      scid: faker.random.uuid(),
+      category_id: 4,
+      name: 'Pampers',
+    },
   ];
 
   return knex('sub_categories')
