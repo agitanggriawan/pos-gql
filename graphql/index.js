@@ -5,11 +5,13 @@ const { gql } = require('apollo-server-express');
 const schemaExamples = require('./schemaExamples');
 const schemaUnits = require('./schemaUnits');
 const schemaCategories = require('./schemaCategories');
+const schemaUsers = require('./schemaUsers');
 
 /* IMPORT FOR RESOLVER */
 const resolverExamples = require('./resolverExamples');
 const resolverUnits = require('./resolverUnits');
 const resolverCategories = require('./resolverCategories');
+const resolverUsers = require('./resolverUsers');
 
 const baseSchema = gql`
   scalar DateTime
@@ -23,8 +25,19 @@ const baseSchema = gql`
   }
 `;
 
-const schemas = [baseSchema, schemaExamples, schemaUnits, schemaCategories];
-const resolvers = [resolverExamples, resolverUnits, resolverCategories];
+const schemas = [
+  baseSchema,
+  schemaExamples,
+  schemaUnits,
+  schemaCategories,
+  schemaUsers,
+];
+const resolvers = [
+  resolverExamples,
+  resolverUnits,
+  resolverCategories,
+  resolverUsers,
+];
 
 module.exports = {
   typeDefs: schemas,
