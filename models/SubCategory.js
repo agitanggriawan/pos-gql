@@ -16,8 +16,8 @@ class SubCategory extends BaseModel {
     const Category = require('./Category');
 
     return {
-      mata_pelajaran: {
-        relation: BaseModel.HasOneRelation,
+      category: {
+        relation: BaseModel.BelongsToOneRelation,
         modelClass: Category,
         join: {
           from: 'sub_categories.category_id',
