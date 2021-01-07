@@ -23,6 +23,18 @@ const resolvers = {
         throw new ApolloError(error, 'INTERNAL_SERVER_ERROR', null);
       }
     },
+    searchCategories: async (_, args) => {
+      try {
+        console.log('==> Accessing searchCategories');
+
+        return Category.query()
+          .where('name', 'ilike', `%${args.name}%`)
+          .orderBy('name', 'asc');
+      } catch (error) {
+        console.log('==> Error accessing: searchCategories');
+        throw new ApolloError(error, 'INTERNAL_SERVER_ERROR', null);
+      }
+    },
   },
   Mutation: {
     async createCategory(_, args) {

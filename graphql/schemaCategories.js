@@ -4,6 +4,7 @@ const typeDefs = gql`
   extend type Query {
     categories: [Category]
     findCategoryByCid(cid: String!): Category
+    searchCategories(name: String!): [Category]
   }
 
   extend type Mutation {

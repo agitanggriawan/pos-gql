@@ -23,6 +23,18 @@ const resolvers = {
         throw new ApolloError(error, 'INTERNAL_SERVER_ERROR', null);
       }
     },
+    searchUnits: async (_, args) => {
+      try {
+        console.log('==> Accessing searchUnits');
+
+        return Unit.query()
+          .where('name', 'ilike', `%${args.name}%`)
+          .orderBy('name', 'asc');
+      } catch (error) {
+        console.log('==> Error accessing: searchUnits');
+        throw new ApolloError(error, 'INTERNAL_SERVER_ERROR', null);
+      }
+    },
   },
   Mutation: {
     async createUnit(_, args) {

@@ -4,6 +4,7 @@ const typeDefs = gql`
   extend type Query {
     units: [Unit]
     findUnitByUnid(unid: String!): Unit
+    searchUnits(name: String!): [Unit]
   }
 
   extend type Mutation {
