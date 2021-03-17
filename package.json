@@ -2,6 +2,9 @@
   "name": "base-express-gql",
   "version": "1.0.0",
   "description": "Base Apollo GraphQL with Express",
+  "engines": {
+    "node": "10.15.3"
+  },
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -18,6 +21,6 @@
     "knex": "^0.21.15",
     "lodash": "^4.17.19",
     "objection": "^2.2.4",
-    "pg": "^8.5.1"
+    "pg": "^7.4.3"
   }
 }
