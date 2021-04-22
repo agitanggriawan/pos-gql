@@ -7,7 +7,7 @@ const resolvers = {
     async createOrder(_, args) {
       try {
         console.log('==> Accessing createOrder');
-        debugger;
+
         return Order.query().insertGraphAndFetch(args.data);
       } catch (error) {
         console.log('==> Error accessing: createOrder');
