@@ -41,6 +41,19 @@ const resolvers = {
         throw new ApolloError(error, 'INTERNAL_SERVER_ERROR', null);
       }
     },
+    findProductByBarcode: async (_, args) => {
+      try {
+        console.log('==> Accessing findProductByBarcode');
+
+        return Product.query()
+          .findOne({ barcode: args.barcode })
+          .orderBy('name', 'ASC')
+          .withGraphFetched('[sub_category, unit]');
+      } catch (error) {
+        console.log('==> Error accessing: findProductByBarcode');
+        throw new ApolloError(error, 'INTERNAL_SERVER_ERROR', null);
+      }
+    },
   },
   Mutation: {
     createProduct: async (_, args) => {

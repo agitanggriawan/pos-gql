@@ -5,6 +5,7 @@ const typeDefs = gql`
     products: [Product]
     findProductByPid(pid: String!): Product
     searchProducts(name: String!): [Product]
+    findProductByBarcode(barcode: String!): Product
   }
 
   extend type Mutation {
@@ -27,6 +28,7 @@ const typeDefs = gql`
     updated_at: DateTime
     sub_category: SubCategory
     unit: Unit
+    barcode: String
   }
 
   input InProduct {
@@ -38,6 +40,7 @@ const typeDefs = gql`
     first_stock: Double!
     last_stock: Double!
     minimal_stock: Double!
+    barcode: String
   }
 `;
 
