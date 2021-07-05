@@ -9,6 +9,7 @@ const schemaUsers = require('./schemaUsers');
 const schemaSubCategories = require('./schemaSubCategories');
 const schemaProducts = require('./schemaProducts');
 const schemaOrders = require('./schemaOrders');
+const schemaCustomers = require('./schemaCustomers');
 
 /* IMPORT FOR RESOLVER */
 const resolverExamples = require('./resolverExamples');
@@ -18,6 +19,7 @@ const resolverUsers = require('./resolverUsers');
 const resolverSubCategories = require('./resolverSubCategories');
 const resolverProducts = require('./resolverProducts');
 const resolverOrders = require('./resolverOrders');
+const resolverCustomers = require('./resolverCustomers');
 
 const baseSchema = gql`
   scalar DateTime
@@ -41,6 +43,7 @@ const schemas = [
   schemaSubCategories,
   schemaProducts,
   schemaOrders,
+  schemaCustomers,
 ];
 const resolvers = [
   resolverExamples,
@@ -50,6 +53,7 @@ const resolvers = [
   resolverSubCategories,
   resolverProducts,
   resolverOrders,
+  resolverCustomers,
 ];
 
 module.exports = {

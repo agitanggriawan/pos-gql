@@ -34,6 +34,7 @@ const resolvers = {
 
         return Product.query()
           .where('name', 'ilike', `%${args.name}%`)
+          .orWhere('barcode', 'ilike', `%${args.name}%`)
           .orderBy('name', 'ASC')
           .withGraphFetched('[sub_category, unit]');
       } catch (error) {
